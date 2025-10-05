@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>로그인</title>
+<link href="img/ikon.png" rel="shortcut icon" type="image/x-icon">
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #banner_nav {
+      background-image: url('img/banner_nav.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative
+    }
+    #navbar {
+      text-align: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      color: #fff;
+      padding: 30px;
+    }
+    #navbar li {
+      padding: 0 50px 0 50px;
+      margin: 40px;
+      font-weight: bold;
+      display: inline;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .content {
+        font-family: "맑은고딕";
+        padding: 100px 0 40px 0;
+    }
+    #input_button ul, #input_button li, #btns li {
+        list-style-type: none;
+    }
+    #login_box {
+      width:500px;
+      height:500px;
+      padding: 0 0px 0 500px;
+    }
+    #login_box input {
+      width:484px;
+      height:50px;
+      border-color: #C8CCD1;
+      border-style: solid;
+      border-width: 0.8px;
+    }
+    #htext {
+      padding: 0 0 0 16px;
+    }
+    #id_pass, #login_btn {
+      vertical-align:top; 
+    }
+    #id_pass span {
+      display: inline-block;
+      width:20px;
+}
+#pass {
+    margin-top:3px;
+}
+#login_btn button {
+    background-color: #fff; 
+    border-color: #003b73;
+    border-width: 0.8px;
+    border-style: solid;
+    color: #000; 
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 15px 225px;
+    border-radius: 28px; 
+    margin: 0 0 10px 0;
+}
+
+#login_btn_2 button {
+    background-color: #003b73;
+    border-color: #003b73;
+    border-width: 0.8px;
+    border-style: solid;
+    color: #fff;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 15px 217px;
+    border-radius: 28px;
+    margin: 5px 0;
+}
+#btns {
+    margin:12px 0 30px 0;
+    text-decoration:underline;
+    text-align: right;
+    color: #ccc;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    a:hover {
+        color: gray;
+    }
+    footer {
+      padding: 30px 280px 30px 280px;
+      background-color: #f5f5f8;
+      font-size: 14px;
+      color: #77777a;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div id="banner_nav">
+        <ul id="navbar">
+        <ul id="navbar li">
+          <li style="font-size: 25px;"><a href="대기제로.html">
+            대기제로<img src="img/웹페이지용로고.png" width="50px"></a> </li>
+          <li><a href="병원찾기.html">
+            병원찾기</a></li>
+          <li><a href="대기조회.html">
+            대기조회</a></li>
+          <li><a href="즐겨찾기.html">
+            즐겨찾기</a></li>
+          <li><a href="마이페이지_로그인.html">
+            <u>마이페이지</u></a></li>
+        </ul>
+        </ul>
+      </ul>
+    </div>
+      <hr>
+    <div class="content">
+        <p style="text-align: center; font-size:50px;">로그인</p>
+        <p style="text-align: center; font-size: 20px; color: #444;">
+            로그인을 하시면 대기제로 홈페이지에서 제공하는 다양한 온라인 서비스를 이용 하실 수 있습니다.</p>
+    </div>
+    <form>
+        <div id="login_box">
+          <ul id="input_button">
+            <li id="id_pass">
+              <ul>
+                <li>
+                  <input type="text" id="htext" placeholder="아이디">
+                </li> 
+                <li id="pass">
+                  <input type="password" id="htext" placeholder="비밀번호">			
+                </li> 
+              </ul>
+            </li>
+            <div>
+                <p id="btns">아이디 / 비밀번호</p>
+            </div>
+            <li id="login_btn">
+              <button>
+                <a href="마이페이지.html" 
+                   style="text-decoration: none; color: #000;">로그인</a></button></li>         
+            <li id="login_btn_2">
+              <button>
+                <a href="회원가입.html" target="_blank"
+                  style="text-decoration: none; color: #fff;">회원가입</a></button></li>
+          </ul>	
+        </div>
+      </form>
+</body>
+<footer>
+  <p><span>이용약관&emsp;</span><span><strong>개인정보처리방침&emsp;</strong></span><span>고객센터</span></p>
+  <pre> </pre>
+  <p style="font-family: arial;">Copyright ⓒ DaegiZero. All Rights Reserved.</p>
+</footer>
+</html>

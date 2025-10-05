@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>경상도 병원 대기조회</title>
+</head>
+<link href="img/ikon.png" rel="shortcut icon" type="image/x-icon">
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #banner_nav {
+      background-image: url('img/banner_nav.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative
+    }
+    #navbar {
+      text-align: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      color: #fff;
+      padding: 30px;
+    }
+    #navbar li {
+      padding: 0 50px 0 50px;
+      margin: 40px;
+      display: inline;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: bold;
+    }
+    main {
+        margin: 50px 150px 0px 150px;
+    }
+    footer {
+      padding: 30px 170px 30px 170px;
+      background-color: #f5f5f8;
+      font-size: 14px;
+      color: #77777a;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    a:hover {
+        color: gray;
+    }
+    #tablebox{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+    }
+    table.tableizer-table {
+		font-size: 18px;
+		border: 0.8px solid #CCC; 
+		font-family: Arial, Helvetica, sans-serif;
+	  } 
+	.tableizer-table td {
+		padding: 10px;
+		border: 0.8px solid #CCC;
+	  }
+	.tableizer-table th {
+		background-color: #003b73; 
+		color: #FFF;
+		font-weight: bold;
+	  }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: center;
+      padding: 15px 5px 15px 5px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    th,td a {
+        text-decoration: none;
+        color: #000000;
+    }
+    #textarea {
+      padding: 0 0 30px 0;
+      text-align: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+    }
+    #add {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-align: right;
+      font-size: 15px;
+      color: #77777a;
+    }
+    #helpbox {
+      padding: 80px 0 10px 0;
+      font-size: 18px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #77777a;
+      display: flex;
+      align-items: center;
+    }
+    #textarea2 {
+      padding: 0 0 80px 50px;
+      font-size: 15px;
+      color: #404040;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #etc {
+        padding: 30px 0 30px 50px;
+        font-size: 18px;
+        color: #000;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #etc a {
+        text-decoration: none;
+        font-size: 17px;
+        color: #404040;
+    }
+</style>
+<body>
+    <div id="banner_nav">
+        <ul id="navbar">
+        <ul id="navbar li">
+            <li style="font-size: 25px;"><a href="대기조회.html">
+                대기제로<img src="img/웹페이지용로고.png" width="50px"></a> </li>
+            <li><a href="병원찾기.html">
+                병원찾기</a></li>
+            <li><a href="대기조회.html">
+                대기조회</a></li>
+            <li><a href="즐겨찾기.html">
+                즐겨찾기</a></li>
+            <li><a href="마이페이지_로그인.html">
+                마이페이지</a></li>
+        </ul>
+      </ul>
+    </div>
+    <hr>    
+</body>
+<main>
+  <div id="textarea">
+    <p>경상도ㆍ대구ㆍ부산ㆍ울산 병원 대기 조회</p>
+  </div>
+  <div id="add">
+    <p style="padding: 0 0 5px 0;">해당 데이터는 2024년 12월 19일 기준이며, 주기적으로 업데이트됩니다.</p>
+  </div>
+    <div id="tablebox">
+        <table class="tableizer-table">
+            <thead><tr class="tableizer-firstrow"><th>병원명</th><th>주소</th><th>혼잡도</th><th>전화번호</th><th>병원홈페이지</th></tr></thead><tbody>
+             <tr><td>경북대학교병원</td><td>대구광역시 중구 동덕로 130</td><td style="background-color: #FF6B6B;">혼잡</td><td>053-200-5114</td><td><a href="https://www.knuh.kr/index.asp" target="_blank">바로가기</a></td></tr>
+             <tr><td>경상국립대학교병원</td><td>경상남도 진주시 강남로 79</td><td style="background-color: #FFE66D;">보통</td><td>055-750-8000</td><td><a href="http://www.gnuh.co.kr/" target="_blank">바로가기</a></td></tr>
+             <tr><td>계명대학교동산병원</td><td>대구광역시 달서구 달구벌대로 1035</td><td style="background-color: #FFE66D;">보통</td><td>1577-6622</td><td><a href="http://www.dsmc.or.kr/" target="_blank">바로가기</a></td></tr>
+             <tr><td>고신대학교복음병원</td><td>부산광역시 서구 감천로 262</td><td style="background-color: #FF6B6B;">혼잡</td><td>990-6114</td><td><a href="http://www.kosinmed.or.kr/" target="_blank">바로가기</a></td></tr>
+             <tr><td>대구가톨릭대학교병원</td><td>대구광역시 남구 두류공원로17길 33</td><td style="background-color: #FF6B6B;">혼잡</td><td>053-650-3000</td><td><a href="http://www.dcmc.co.kr/" target="_blank">바로가기</a></td></tr>
+             <tr><td>동아대학교병원</td><td>부산광역시 서구 대신공원로 26</td><td style="background-color: #FF6B6B;">혼잡</td><td>051-240-2400</td><td><a href="http://www.damc.or.kr" target="_blank">바로가기</a></td></tr>
+             <tr><td>부산대학교병원</td><td>부산광역시 서구 구덕로 179</td><td style="background-color: #FF6B6B;">혼잡</td><td>240-7000</td><td><a href="https://www.pnuh.or.kr/pnuh/index.do" target="_blank">바로가기</a></td></tr>
+             <tr><td>양산부산대학교병원</td><td>경상남도 양산시 물금읍 금오로 20</td><td style="background-color: #55ee57;">여유</td><td>055-360-1000</td><td><a href="https://www.pnuyh.or.kr/pnuyh/intro.do" target="_blank">바로가기</a></td></tr>
+             <tr><td>영남대학교병원</td><td>대구광역시 남구 현충로 170</td><td style="background-color: #FF6B6B;">혼잡</td><td>053-623-8001</td><td><a href="https://www.pnuh.or.kr/pnuh/index.do" target="_blank">바로가기</a></td></tr>
+             <tr><td>인제대학교부산백병원</td><td>부산광역시 부산진구 복지로 75</td><td style="background-color: #FFE66D;">보통</td><td>051-890-6114</td><td><a href="https://www.paik.ac.kr/busan/user/main/view.do" target="_blank">바로가기</a></td></tr>
+             <tr><td>칠곡경북대학교병원</td><td>대구광역시 북구 호국로 807</td><td style="background-color: #55ee57;">여유</td><td>053-200-2000</td><td><a href="https://www.knuch.kr:442/index.asp" target="_blank">바로가기</a></td></tr>
+             <tr><td>울산공업학원 울산대학교병원</td><td>울산광역시 동구 대학병원로 25</td><td style="background-color: #55ee57;">여유</td><td>052-250-7000</td><td><a href="https://www.uuh.ulsan.kr/intro/" target="_blank">바로가기</a></td></tr>
+             <tr><td>성균관대학 삼성창원병원</td><td>경상남도 창원시 마산회원구 팔용로 158-158</td><td style="background-color: #55ee57;">여유</td><td>055-233-8899</td><td><a href="http://smc.skku.edu" target="_blank">바로가기</a></td></tr>
+            </tbody></table>
+    </div>
+    <div id="helpbox">
+      <span><img src="img/help.png" width="40px"></span><span>&nbsp;혼잡도는 병원의 평균 방문자 데이터를 기반으로 제공되며, 실제 상황과 다를 수 있습니다.</span><br>
+    </div>
+    <div id="textarea2">
+      <p><span><strong>혼잡&emsp;</strong></span><span>대기시간 1시간 이상</span></p>
+      <p><span><strong>보통&emsp;</strong></span><span>대기시간 30분 ~ 1시간</span></p>
+      <p><span><strong>여유&emsp;</strong></span><span>대기시간 30분 이하</span></p>
+    </div>
+    <hr>
+    <div id="etc">
+        <strong>다른 지역 조회하기</strong><br>
+        <a href="서울 대기조회.html">
+          서울</a><br>
+        <a href="경기 대기조회.html">
+          경기도ㆍ인천</a><br>
+        <a href="강원 대기조회.html">
+          강원</a><br>
+        <a href="충청 대기조회.html">
+          충청도ㆍ대전</a><br>
+        <a href="경상도 대기조회.html">
+          전라도ㆍ광주</a>
+    </div>
+</main>
+<footer>
+    <p><span>이용약관&emsp;</span><span><strong>개인정보처리방침&emsp;</strong></span><span>고객센터</span></p>
+    <pre> </pre>
+    <p style="font-family: arial;">Copyright ⓒ DaegiZero. All Rights Reserved.</p>
+</footer>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>병원찾기</title>
+    <link href="img/ikon.png" rel="shortcut icon" type="image/x-icon">
+</head>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #banner_nav {
+      background-image: url('img/banner_nav.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative
+    }
+    #navbar {
+      text-align: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      color: #fff;
+      padding: 30px;
+    }
+    #navbar li {
+      padding: 0 50px 0 50px;
+      margin: 40px;
+      display: inline;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: bold;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    a:hover {
+        color: gray;
+    }
+    footer {
+      padding: 30px 280px 30px 280px;
+      background-color: #f5f5f8;
+      font-size: 14px;
+      color: #77777a;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    main {
+      margin: 30px 170px 30px 170px;
+      font-family: sans-serif;
+    }
+    #searchbox{
+      padding: 30px 0 30px 350px;
+    }
+    #searchbox input{
+      width: 484px;
+      height: 50px;
+      border-color: #C8CCD1;
+      border-style: solid;
+      border-radius: 0.8px;
+    }
+    #searchtext {
+      padding: 0 0 0 16px;
+    }
+    #searchbox ul {
+      list-style-type: none;
+    }
+    #tables {
+      padding: 30px 0 50px 0;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 20px;
+    }
+    th, td {
+      text-align: center;
+      padding: 10px 5px 10px 5px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    tr:nth-child(even) {
+      background-color: #d1d1d1;
+    }
+    .tableizer-table th {
+		background-color: #b3b3b3; 
+		color: #000;
+		font-weight: bold;
+	  }
+    .tableizer-table td {
+
+		border: 1px solid #CCC;
+	}
+</style>
+<body>
+    <div id="banner_nav">
+        <ul id="navbar">
+        <ul id="navbar li">
+          <li style="font-size: 25px;"><a href="대기제로.html">
+            대기제로<img src="img/웹페이지용로고.png" width="50px"></a> </li>
+            <li><a href="병원찾기.html">
+              <u>병원찾기</u></a></li>
+            <li><a href="대기조회.html">
+                대기조회</a></li>
+            <li><a href="즐겨찾기.html">
+                즐겨찾기</a></li>
+            <li><a href="마이페이지_로그인.html">
+                마이페이지</a></li>
+        </ul>
+      </ul>
+    </div>
+    <hr>
+</body>
+<main>
+  <form>
+    <div id="searchbox">
+      <ul>
+        <li>
+          <input type="text" id="searchtext" placeholder="찾으시려는 병원명을 입력하세요">
+        </li>
+      </ul>
+    </div>
+  </form>
+  <div id="tables">
+    <table class="tableizer-table">
+      <thead><tr class="tableizer-firstrow"><th>병원명</th><th>주소</th></tr></thead><tbody>
+       <tr><td>가톨릭대학교 성빈센트병원</td><td>경기도 수원시 팔달구 중부대로 93, (지동)</td></tr>
+       <tr><td>가톨릭대학교인천성모병원</td><td>인천광역시 부평구 동수로 56, (부평동)</td></tr>
+       <tr><td>강릉아산병원</td><td>강원특별자치도 강릉시 사천면 방동길 38, (사천면)</td></tr>
+       <tr><td>강북삼성병원</td><td>서울특별시 종로구 새문안로 29, (평동)</td></tr>
+       <tr><td>건국대학교병원</td><td>서울특별시 광진구 능동로 120-1, (화양동)</td></tr>
+       <tr><td>경북대학교병원</td><td>대구광역시 중구 동덕로 130, (삼덕동2가, 경북대학교병원)</td></tr>
+       <tr><td>경상국립대학교병원</td><td>경상남도 진주시 강남로 79, (칠암동)</td></tr>
+       <tr><td>경희대학교병원</td><td>서울특별시 동대문구 경희대로 23, (회기동)</td></tr>
+       <tr><td>계명대학교동산병원</td><td>대구광역시 달서구 달구벌대로 1035, (신당동)</td></tr>
+       <tr><td>고려대학교의과대학부속구로병원</td><td>서울특별시 구로구 구로동로 148, 고려대부속구로병원 (구로동)</td></tr>
+       <tr><td>고려대학교의과대학부속안산병원</td><td>경기도 안산시 단원구 적금로 123, (고잔동)</td></tr>
+       <tr><td>고신대학교복음병원</td><td>부산광역시 서구 감천로 262, (암남동)</td></tr>
+       <tr><td>단국대학교의과대학부속병원</td><td>충청남도 천안시 동남구 망향로 201,  (안서동)</td></tr>
+       <tr><td>대구가톨릭대학교병원</td><td>대구광역시 남구 두류공원로17길 33, (대명동)</td></tr>
+       <tr><td>동아대학교병원</td><td>부산광역시 서구 대신공원로 26, (동대신동3가)</td></tr>
+       <tr><td>부산대학교병원</td><td>부산광역시 서구 구덕로 179, (아미동1가)</td></tr>
+       <tr><td>분당서울대학교병원</td><td>경기도 성남시 분당구 구미로173번길 82, (구미동, 분당서울대학교병원)</td></tr>
+       <tr><td>삼성서울병원</td><td>서울특별시 강남구 일원로 81, (일원동, 삼성의료원)</td></tr>
+       <tr><td>서울대학교병원</td><td>서울특별시 종로구 대학로 101, (연건동)</td></tr>
+       <tr><td>순천향대학교부속부천병원</td><td>경기도 부천시 원미구 조마루로 170, (중동)</td></tr>
+       <tr><td>아주대학교병원</td><td>경기도 수원시 영통구 월드컵로 164, (원천동)</td></tr>
+       <tr><td>양산부산대학교병원</td><td>경상남도 양산시 물금읍 금오로 20, (물금읍)</td></tr>
+       <tr><td>연세대학교 원주세브란스기독병원</td><td>강원특별자치도 원주시 일산로 20-0,  (일산동)</td></tr>
+       <tr><td>연세대학교의과대학 강남세브란스병원</td><td>서울특별시 강남구 언주로 211, 강남세브란스병원 (도곡동)</td></tr>
+       <tr><td>연세대학교의과대학세브란스병원</td><td>서울특별시 서대문구 연세로 50-1, (신촌동)</td></tr>
+       <tr><td>영남대학교병원</td><td>대구광역시 남구 현충로 170, (대명동)</td></tr>
+       <tr><td>원광대학교병원</td><td>전북특별자치도 익산시 무왕로 895, (신동)</td></tr>
+       <tr><td>길의료재단 길병원</td><td>인천광역시 남동구 남동대로774번길 21-0, 의료법인길의료재단길병원</td></tr>
+       <tr><td>이화여자대학교의과대학부속목동병원</td><td>서울특별시 양천구 안양천로 1071, (목동)</td></tr>
+       <tr><td>인제대학교부산백병원</td><td>부산광역시 부산진구 복지로 75, 진사로83번길 75, 진사로83번길 81, 1층(일부), 3층 (개금동)</td></tr>
+       <tr><td>인하대학교의과대학부속병원</td><td>인천광역시 중구 인항로 27, (신흥동3가)</td></tr>
+       <tr><td>재단법인아산사회복지재단 서울아산병원</td><td>서울특별시 송파구 올림픽로43길 88, 서울아산병원 (풍납동)</td></tr>
+       <tr><td>전남대학교병원</td><td>광주광역시 동구 제봉로 42,  (학동)</td></tr>
+       <tr><td>전북대학교병원</td><td>전북특별자치도 전주시 덕진구 건지로 20,  (금암동)</td></tr>
+       <tr><td>조선대학교병원</td><td>광주광역시 동구 필문대로 365,  (학동)</td></tr>
+       <tr><td>중앙대학교병원</td><td>서울특별시 동작구 흑석로 102, (흑석동)</td></tr>
+       <tr><td>충남대학교병원</td><td>대전광역시 중구 문화로 282, (대사동)</td></tr>
+       <tr><td>충북대학교병원</td><td>충청북도 청주시 서원구 1순환로 776-0, 충북대학교병원</td></tr>
+       <tr><td>칠곡경북대학교병원</td><td>대구광역시 북구 호국로 807, 칠곡경북대학교병원(임상실습동 1~11층 포함) (학정동)</td></tr>
+       <tr><td>건양교육재단 건양대학교병원</td><td>대전광역시 서구 관저동로 158, (관저동)</td></tr>
+       <tr><td>고려중앙학원 고려대학교의과대학부속병원</td><td>서울특별시 성북구 고려대로 73, 고려대병원 (안암동5가)</td></tr>
+       <tr><td>울산공업학원 울산대학교병원</td><td>울산광역시 동구 대학병원로 25, 울산대학교병원 (전하동)</td></tr>
+       <tr><td>가톨릭학원가톨릭대학교서울성모병원</td><td>서울특별시 서초구 반포대로 222, (반포동)</td></tr>
+       <tr><td>성균관대학삼성창원병원</td><td>경상남도 창원시 마산회원구 팔용로 158-158, (합성동, 삼성창원병원)</td></tr>
+       <tr><td>한림대학교성심병원</td><td>경기도 안양시 동안구 관평로170번길 22, (평촌동)</td></tr>
+       <tr><td>한양대학교병원</td><td>서울특별시 성동구 왕십리로 222-1, (사근동)</td></tr>
+       <tr><td>화순전남대학교병원</td><td>전라남도 화순군 화순읍 서양로 322, (화순읍)</td></tr>
+      </tbody></table>
+  </div>
+</main>
+<footer>
+    <p><span>이용약관&emsp;</span><span><strong>개인정보처리방침&emsp;</strong></span><span>고객센터</span></p>
+    <pre> </pre>
+    <p style="font-family: arial;">Copyright ⓒ DaegiZero. All Rights Reserved.</p>
+</footer>
+</html>
